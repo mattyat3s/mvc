@@ -58,8 +58,6 @@ func SockServer(ws *websocket.Conn) {
       return
     }
 
-    log.Println(todo)
-
     for i, _ := range Todos {
       if Todos[i].Id == todo.Id {
         found = true;
