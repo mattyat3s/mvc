@@ -1,0 +1,67 @@
+html,
+body {
+  margin: 0;
+}
+body {
+  font-family: 'Indie Flower', cursive;
+  background-color: rgb(255, 0, 92);
+  transition: background-color 1000ms linear;
+}
+body.pinky-red {
+  background-color: rgb(255, 0, 92);
+}
+body.pink {
+  background-color: rgb(214, 0, 255);
+}
+body.purple {
+  background-color: rgb(122, 0, 255);
+}
+body.blue {
+  background-color: rgb(0, 133, 255);
+}
+body.light-blue {
+  background-color: rgb(0, 163, 255);
+}
+body.turquoise {
+  background-color: rgb(0, 255, 204);
+}
+body.lime-green {
+  background-color: rgb(61, 255, 0);
+}
+body.orange {
+  background-color: rgb(255, 173, 0);
+}
+body.red {
+  background-color: rgb(255, 61, 0);
+}
+.heading {
+  font-size: 70px;
+  text-align: center;
+}
+.view {
+  margin: 0 auto;
+  max-width: 700px;
+  color: white;
+}
+input {
+  font-family: 'Indie Flower', cursive;
+  width: 100%;
+  font-size: 22px;
+  line-height: 52px;
+  padding: 0 10px;
+  -webkit-appearance: none;
+  border: none;
+  background: #ffffff61;
+  outline: none;
+  color: white;
+}
+.item {
+  position: relative;
+  font-size: 22px;
+  line-height: 52px;
+  padding: 0 10px;
+  border-bottom: 1px dashed white;
+}
+.done {
+  text-decoration: line-through;;
+}
