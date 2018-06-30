@@ -10,4 +10,4 @@ connectToServer().then(() => {
   todos = new ToDoCollection(ToDoModel);
   todoListView = new ToDoListView();
   document.body.appendChild(todoListView.el);
-});
+})

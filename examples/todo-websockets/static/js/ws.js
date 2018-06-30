@@ -9,5 +9,7 @@ function connectToServer() {
       todos.add(array);
     }
     sock.onopen = event => resolve();
+    sock.onerror = event => alert("Server is not running.");
+    sock.onclose = event => alert("Server connection closed.");
   });
 };
