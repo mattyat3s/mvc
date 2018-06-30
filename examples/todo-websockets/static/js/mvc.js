@@ -74,8 +74,8 @@ class Collection {
   }
 
   each(callback) {
-    for (let object of this.array) {
-      callback(object);
+    for (let model of this.array) {
+      callback(model);
     }
   }
 }
