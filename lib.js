@@ -40,14 +40,36 @@ class Collection {
     this.listeners.push(listener);
   }
 
-  add(array) {
-    for (let object of array) {
-      let model = new this.model(object);
-      this.array.push(model);
+  add(data) {
+    if (Array.isArray(data)) {
+      this.addArray(data);
+    } else if (data instanceof Model) {
+      this.addModel(data);
+    } else {
+      this.addObject(data);
+    }
+  }
 
-      for(let listener of this.listeners) {
-        listener(model);
+  addArray(array) {
+    for (let object of array) {
+      if (object instanceof Model) {
+        this.addModel(object);
+      } else {
+        this.addObject(object);
       }
+    }
+  }
+
+  addObject(object) {
+    let model = new this.model(object);
+    this.addModel(model);
+  }
+
+  addModel(model) {
+    this.array.push(model);
+
+    for(let listener of this.listeners) {
+      listener(model);
     }
   }
 
